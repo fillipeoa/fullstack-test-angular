@@ -6,6 +6,44 @@
   // TODO: criar um método POST no api.service que envie o texto do input e exiba a resposta na página
 -->
 
-<h1>Título da página</h1>
+<div class="row">
+  <div class="col-md-12 header">
+    <h1>Título da página</h1>
+  </div>
+</div>
 
-{{ apiGreeting }}
+<div class="row">
+  <div class="col-md-4 sidebar">
+    <h3>SIDEBAR</h3>
+    <a [routerLink]="['/start']"><h4 style="margin-top: 1em;">Start</h4></a>
+  </div>
+  <div class="col-md-8 content">
+
+    <h3>{{ apiGreeting }}</h3>
+
+    <br />
+
+    <h5>{{ dateTime }}</h5>
+
+    <form [formGroup]="textForm" (ngSubmit)="submit()">
+
+        <div class="field">
+          <input type="text" pInputText class="p-inputtext-lg textbox-content" formControlName="text"/>
+    
+          <span class="text-danger"
+              *ngIf="submitted && textForm.controls.text.errors?.required">
+              <br/>
+              Digite algum texto para enviar!
+          </span>
+        </div>
+
+        <br />
+
+        <p-button class="p-button-lg btn-content" type="submit" icon="pi pi-check" label="Enviar"></p-button>
+    </form>
+
+    <br />
+
+    <h5>{{ response }}</h5>
+  </div>
+</div>
