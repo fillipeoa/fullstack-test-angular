@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginaComponent } from './pagina/pagina.component';
 import { StartComponent } from './start/start.component';
+import { ButtonModule} from 'primeng/button';
+import { InputTextModule} from 'primeng/inputtext';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +18,12 @@ import { StartComponent } from './start/start.component';
     StartComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]

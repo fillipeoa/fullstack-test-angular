@@ -1,0 +1,44 @@
+.header{
+    text-align: center;
+    color:white;
+    background-color: #7950f2;
+    padding: 5% 0;
+    z-index: 10;
+}
+
+.sidebar{
+    height: 800px;
+    background-color: #ced4da;
+    padding: 3em
+}
+
+.content{
+    padding: 5%;
+}
+
+h1, h1, h3, h4, h5, span{
+    margin: 0px;
+    text-align: center;
+}
+
+h5{
+    color: gray;
+}
+
+
+.field{
+    width: 40%;
+    margin: 10px;
+    margin-left: 30%;
+}
+
+.textbox-content{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+:host ::ng-deep .p-button{
+    width: 20%;
+    font-size:18px;
+    margin-left: 40%;
+}
